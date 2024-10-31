@@ -155,5 +155,5 @@ VL_ATTR_COLD void VminiALU_top___024root___ctor_var_reset(VminiALU_top___024root
     auto &vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelf->switches = VL_RAND_RESET_I(10);
-    vlSelf->led = VL_RAND_RESET_I(10);
+    vlSelf->leds = VL_RAND_RESET_I(10);
 }

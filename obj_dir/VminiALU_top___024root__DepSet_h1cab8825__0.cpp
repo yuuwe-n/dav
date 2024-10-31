@@ -24,7 +24,7 @@ VL_INLINE_OPT void VminiALU_top___024root___ico_sequent__TOP__0(VminiALU_top___0
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU_top___024root___ico_sequent__TOP__0\n"); );
     auto &vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.led = vlSelfRef.switches;
+    vlSelfRef.leds = vlSelfRef.switches;
 }
 
 void VminiALU_top___024root___eval_triggers__ico(VminiALU_top___024root* vlSelf);

@@ -18,7 +18,7 @@ class alignas(VL_CACHE_LINE_BYTES) VminiALU_top___024root final : public Verilat
     CData/*0:0*/ __VicoFirstIteration;
     CData/*0:0*/ __VactContinue;
     VL_IN16(switches,9,0);
-    VL_OUT16(led,9,0);
+    VL_OUT16(leds,9,0);
     IData/*31:0*/ __VactIterCount;
     VlTriggerVec<1> __VstlTriggered;
     VlTriggerVec<1> __VicoTriggered;

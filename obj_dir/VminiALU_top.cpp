@@ -10,7 +10,7 @@ VminiALU_top::VminiALU_top(VerilatedContext* _vcontextp__, const char* _vcname__
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new VminiALU_top__Syms(contextp(), _vcname__, this)}
     , switches{vlSymsp->TOP.switches}
-    , led{vlSymsp->TOP.led}
+    , leds{vlSymsp->TOP.leds}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

@@ -1,8 +1,9 @@
+`timescale 1ns/1ns
 module miniALU_top(
 	input [9:0] switches,
-	output [9:0] led
+	output [9:0] leds
 );
 
-	assign led = switches;
+	assign leds = switches;
 
 endmodule
