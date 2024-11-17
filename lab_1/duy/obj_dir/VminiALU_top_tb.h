@@ -5,19 +5,21 @@
 // The class here is then constructed to instantiate the design.
 // See the Verilator manual for examples.
 
-#ifndef VERILATED_VMINIALU_TOP_H_
-#define VERILATED_VMINIALU_TOP_H_  // guard
+#ifndef VERILATED_VMINIALU_TOP_TB_H_
+#define VERILATED_VMINIALU_TOP_TB_H_  // guard
 
 #include "verilated.h"
 
-class VminiALU_top__Syms;
-class VminiALU_top___024root;
+class VminiALU_top_tb__Syms;
+class VminiALU_top_tb___024root;
+class VminiALU_top_tb___024unit;
+
 
 // This class is the main interface to the Verilated model
-class alignas(VL_CACHE_LINE_BYTES) VminiALU_top VL_NOT_FINAL : public VerilatedModel {
+class alignas(VL_CACHE_LINE_BYTES) VminiALU_top_tb VL_NOT_FINAL : public VerilatedModel {
   private:
     // Symbol table holding complete model state (owned by this class)
-    VminiALU_top__Syms* const vlSymsp;
+    VminiALU_top_tb__Syms* const vlSymsp;
 
   public:
 
@@ -28,28 +30,27 @@ class alignas(VL_CACHE_LINE_BYTES) VminiALU_top VL_NOT_FINAL : public VerilatedM
     // PORTS
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
-    VL_IN16(&switches,9,0);
-    VL_OUT64(&displayBits,47,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
+    VminiALU_top_tb___024unit* const __PVT____024unit;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.
-    VminiALU_top___024root* const rootp;
+    VminiALU_top_tb___024root* const rootp;
 
     // CONSTRUCTORS
     /// Construct the model; called by application code
     /// If contextp is null, then the model will use the default global context
     /// If name is "", then makes a wrapper with a
     /// single model invisible with respect to DPI scope names.
-    explicit VminiALU_top(VerilatedContext* contextp, const char* name = "TOP");
-    explicit VminiALU_top(const char* name = "TOP");
+    explicit VminiALU_top_tb(VerilatedContext* contextp, const char* name = "TOP");
+    explicit VminiALU_top_tb(const char* name = "TOP");
     /// Destroy the model; called (often implicitly) by application code
-    virtual ~VminiALU_top();
+    virtual ~VminiALU_top_tb();
   private:
-    VL_UNCOPYABLE(VminiALU_top);  ///< Copying not allowed
+    VL_UNCOPYABLE(VminiALU_top_tb);  ///< Copying not allowed
 
   public:
     // API METHODS

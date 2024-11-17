@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module tb_miniALU_top;
+module miniALU_top_tb;
 
     // Testbench signals
     reg [9:0] switches;         // Simulated FPGA switches

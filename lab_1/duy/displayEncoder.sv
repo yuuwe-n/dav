@@ -1,3 +1,5 @@
+`timescale 1ns/1ns
+
 module displayEncoder(
     input [19:0] result,         // 20-bit input from ALU
     output [47:0] displayBits    // 48-bit output for six 8-bit seven-segment displays

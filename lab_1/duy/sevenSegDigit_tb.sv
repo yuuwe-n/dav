@@ -1,3 +1,5 @@
+`timescale 1ns/1ns
+
 module sevenSegDigit_tb;
     reg [3:0] digit;
     wire [7:0] displayBits;

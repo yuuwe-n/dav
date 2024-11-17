@@ -18,13 +18,1043 @@ void VminiALU_top___024root___eval_ico(VminiALU_top___024root* vlSelf) {
     }
 }
 
+extern const VlUnpacked<CData/*7:0*/, 16> VminiALU_top__ConstPool__TABLE_h99d7759d_0;
+
 VL_INLINE_OPT void VminiALU_top___024root___ico_sequent__TOP__0(VminiALU_top___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU_top__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU_top___024root___ico_sequent__TOP__0\n"); );
     auto &vlSelfRef = std::ref(*vlSelf).get();
+    // Init
+    IData/*23:0*/ miniALU_top__DOT__encoder_instance__DOT__bcd;
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 0;
+    CData/*7:0*/ miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay0__displayBits;
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay0__displayBits = 0;
+    CData/*7:0*/ miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay1__displayBits;
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay1__displayBits = 0;
+    CData/*7:0*/ miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay2__displayBits;
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay2__displayBits = 0;
+    CData/*7:0*/ miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay3__displayBits;
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay3__displayBits = 0;
+    CData/*7:0*/ miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay4__displayBits;
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay4__displayBits = 0;
+    CData/*7:0*/ miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay5__displayBits;
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay5__displayBits = 0;
+    CData/*3:0*/ __Vtableidx1;
+    __Vtableidx1 = 0;
+    CData/*3:0*/ __Vtableidx2;
+    __Vtableidx2 = 0;
+    CData/*3:0*/ __Vtableidx3;
+    __Vtableidx3 = 0;
+    CData/*3:0*/ __Vtableidx4;
+    __Vtableidx4 = 0;
+    CData/*3:0*/ __Vtableidx5;
+    __Vtableidx5 = 0;
+    CData/*3:0*/ __Vtableidx6;
+    __Vtableidx6 = 0;
     // Body
-    vlSelfRef.leds = vlSelfRef.switches;
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 0U;
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        ((0xf00000U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+         | (0xfffffU & ((2U & (IData)(vlSelfRef.switches))
+                         ? ((1U & (IData)(vlSelfRef.switches))
+                             ? ((0xfU & ((IData)(vlSelfRef.switches) 
+                                         >> 6U)) >> 
+                                (0xfU & ((IData)(vlSelfRef.switches) 
+                                         >> 2U))) : 
+                            ((0xfU & ((IData)(vlSelfRef.switches) 
+                                      >> 6U)) << (0xfU 
+                                                  & ((IData)(vlSelfRef.switches) 
+                                                     >> 2U))))
+                         : ((1U & (IData)(vlSelfRef.switches))
+                             ? ((0xfU & ((IData)(vlSelfRef.switches) 
+                                         >> 6U)) - 
+                                (0xfU & ((IData)(vlSelfRef.switches) 
+                                         >> 2U))) : 
+                            ((0xfU & ((IData)(vlSelfRef.switches) 
+                                      >> 6U)) + (0xfU 
+                                                 & ((IData)(vlSelfRef.switches) 
+                                                    >> 2U)))))));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x14U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                               >> 0x14U)) 
+                               << 0x14U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0x10U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xf0ffffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                              >> 0x10U)) 
+                              << 0x10U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 0xcU)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xff0fffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf000U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                             >> 0xcU)) 
+                             << 0xcU)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 8U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfff0ffU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf00U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                            >> 8U)) 
+                            << 8U)));
+    }
+    if ((5U <= (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                        >> 4U)))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xffff0fU & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xf0U & (((IData)(3U) + (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                                           >> 4U)) 
+                           << 4U)));
+    }
+    if ((5U <= (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd))) {
+        miniALU_top__DOT__encoder_instance__DOT__bcd 
+            = ((0xfffff0U & miniALU_top__DOT__encoder_instance__DOT__bcd) 
+               | (0xfU & ((IData)(3U) + miniALU_top__DOT__encoder_instance__DOT__bcd)));
+    }
+    miniALU_top__DOT__encoder_instance__DOT__bcd = 
+        (0xffffffU & VL_SHIFTL_III(24,24,32, miniALU_top__DOT__encoder_instance__DOT__bcd, 1U));
+    __Vtableidx1 = (0xfU & miniALU_top__DOT__encoder_instance__DOT__bcd);
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay0__displayBits 
+        = VminiALU_top__ConstPool__TABLE_h99d7759d_0
+        [__Vtableidx1];
+    __Vtableidx2 = (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                            >> 4U));
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay1__displayBits 
+        = VminiALU_top__ConstPool__TABLE_h99d7759d_0
+        [__Vtableidx2];
+    __Vtableidx3 = (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                            >> 8U));
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay2__displayBits 
+        = VminiALU_top__ConstPool__TABLE_h99d7759d_0
+        [__Vtableidx3];
+    __Vtableidx4 = (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                            >> 0xcU));
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay3__displayBits 
+        = VminiALU_top__ConstPool__TABLE_h99d7759d_0
+        [__Vtableidx4];
+    __Vtableidx5 = (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                            >> 0x10U));
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay4__displayBits 
+        = VminiALU_top__ConstPool__TABLE_h99d7759d_0
+        [__Vtableidx5];
+    __Vtableidx6 = (0xfU & (miniALU_top__DOT__encoder_instance__DOT__bcd 
+                            >> 0x14U));
+    miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay5__displayBits 
+        = VminiALU_top__ConstPool__TABLE_h99d7759d_0
+        [__Vtableidx6];
+    vlSelfRef.displayBits = (((QData)((IData)(miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay5__displayBits)) 
+                              << 0x28U) | (((QData)((IData)(miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay4__displayBits)) 
+                                            << 0x20U) 
+                                           | (QData)((IData)(
+                                                             (((IData)(miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay3__displayBits) 
+                                                               << 0x18U) 
+                                                              | (((IData)(miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay2__displayBits) 
+                                                                  << 0x10U) 
+                                                                 | (((IData)(miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay1__displayBits) 
+                                                                     << 8U) 
+                                                                    | (IData)(miniALU_top__DOT__encoder_instance__DOT____Vcellout__digitDisplay0__displayBits))))))));
 }
 
 void VminiALU_top___024root___eval_triggers__ico(VminiALU_top___024root* vlSelf);

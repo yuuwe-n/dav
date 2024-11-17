@@ -1,3 +1,5 @@
+`timescale 1ns/1ns
+
 module sevenSegDigit(
     input [3:0] digit,           // 4-bit input digit (0-9)
     output reg [7:0] displayBits // 8-bit active-low output for seven-segment display

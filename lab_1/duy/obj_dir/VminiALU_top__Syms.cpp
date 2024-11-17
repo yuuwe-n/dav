@@ -18,7 +18,7 @@ VminiALU_top__Syms::VminiALU_top__Syms(VerilatedContext* contextp, const char* n
     , TOP{this, namep}
 {
         // Check resources
-        Verilated::stackCheck(25);
+        Verilated::stackCheck(89);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-9);
     _vm_contextp__->timeprecision(-9);

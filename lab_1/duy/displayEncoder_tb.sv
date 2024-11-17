@@ -1,3 +1,5 @@
+`timescale 1ns/1ns
+
 module displayEncoder_tb;
     reg [19:0] result;
     wire [47:0] displayBits;
