@@ -5,6 +5,7 @@ module miniALU_top(
 	output [9:0] leds
 );
 
+	// assigns inputs to outputs
 	assign leds = switches;
 
 endmodule
