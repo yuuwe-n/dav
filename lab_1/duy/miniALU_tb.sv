@@ -5,7 +5,6 @@ module miniALU_tb ();
 	logic [9:0] switches_tb;
 	logic [9:0] leds_tb;
 
-
 	miniALU_top uut(
 		.switches(switches_tb),
 		.leds(leds_tb)
