@@ -48,7 +48,7 @@ VL_ATTR_COLD void VminiALU_top___024root___eval_settle(VminiALU_top___024root* v
 #ifdef VL_DEBUG
             VminiALU_top___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("miniALU_top.sv", 1, "", "Settle region did not converge.");
+            VL_FATAL_MT("miniALU_top.sv", 2, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;

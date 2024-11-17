@@ -20,8 +20,8 @@ VminiALU_top__Syms::VminiALU_top__Syms(VerilatedContext* contextp, const char* n
         // Check resources
         Verilated::stackCheck(25);
     // Configure time unit / time precision
-    _vm_contextp__->timeunit(-12);
-    _vm_contextp__->timeprecision(-12);
+    _vm_contextp__->timeunit(-9);
+    _vm_contextp__->timeprecision(-9);
     // Setup each module's pointers to their submodules
     // Setup each module's pointer back to symbol table (for public functions)
     TOP.__Vconfigure(true);
