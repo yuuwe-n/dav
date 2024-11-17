@@ -15,9 +15,16 @@ class alignas(VL_CACHE_LINE_BYTES) VminiALU_tb___024root final : public Verilate
   public:
 
     // DESIGN SPECIFIC STATE
+    CData/*3:0*/ miniALU_tb__DOT__op1;
+    CData/*3:0*/ miniALU_tb__DOT__op2;
+    CData/*0:0*/ miniALU_tb__DOT__operation;
+    CData/*0:0*/ miniALU_tb__DOT__sign;
+    CData/*0:0*/ __VstlFirstIteration;
     CData/*0:0*/ __VactContinue;
+    IData/*19:0*/ miniALU_tb__DOT__result;
     IData/*31:0*/ __VactIterCount;
     VlDelayScheduler __VdlySched;
+    VlTriggerVec<1> __VstlTriggered;
     VlTriggerVec<1> __VactTriggered;
     VlTriggerVec<1> __VnbaTriggered;
 

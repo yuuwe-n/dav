@@ -31,6 +31,7 @@ VM_CLASSES_FAST += \
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
 	VminiALU_tb___024root__Slow \
+	VminiALU_tb___024root__DepSet_h914170c1__0__Slow \
 	VminiALU_tb___024root__DepSet_h48987b78__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
