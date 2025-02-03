@@ -11,7 +11,7 @@ void VminiALU___024root___eval_ico(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_ico\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if ((1ULL & vlSelfRef.__VicoTriggered.word(0U))) {
         VminiALU___024root___ico_sequent__TOP__0(vlSelf);
@@ -22,7 +22,7 @@ VL_INLINE_OPT void VminiALU___024root___ico_sequent__TOP__0(VminiALU___024root* 
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___ico_sequent__TOP__0\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelfRef.result = (0xfffffU & ((IData)(vlSelfRef.operation)
                                      ? ((IData)(vlSelfRef.sign)
@@ -43,7 +43,7 @@ bool VminiALU___024root___eval_phase__ico(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_phase__ico\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     CData/*0:0*/ __VicoExecute;
     // Body
@@ -59,14 +59,14 @@ void VminiALU___024root___eval_act(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_act\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
 }
 
 void VminiALU___024root___eval_nba(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_nba\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
 }
 
 void VminiALU___024root___eval_triggers__act(VminiALU___024root* vlSelf);
@@ -75,7 +75,7 @@ bool VminiALU___024root___eval_phase__act(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_phase__act\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     VlTriggerVec<0> __VpreTriggered;
     CData/*0:0*/ __VactExecute;
@@ -94,7 +94,7 @@ bool VminiALU___024root___eval_phase__nba(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_phase__nba\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     CData/*0:0*/ __VnbaExecute;
     // Body
@@ -120,7 +120,7 @@ void VminiALU___024root___eval(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     IData/*31:0*/ __VicoIterCount;
     CData/*0:0*/ __VicoContinue;
@@ -182,7 +182,7 @@ void VminiALU___024root___eval_debug_assertions(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_debug_assertions\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if (VL_UNLIKELY((vlSelfRef.op1 & 0xf0U))) {
         Verilated::overWidthError("op1");}

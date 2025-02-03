@@ -9,21 +9,21 @@ VL_ATTR_COLD void VminiALU___024root___eval_static(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_static\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
 }
 
 VL_ATTR_COLD void VminiALU___024root___eval_initial(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_initial\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
 }
 
 VL_ATTR_COLD void VminiALU___024root___eval_final(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_final\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
 }
 
 #ifdef VL_DEBUG
@@ -35,7 +35,7 @@ VL_ATTR_COLD void VminiALU___024root___eval_settle(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_settle\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     IData/*31:0*/ __VstlIterCount;
     CData/*0:0*/ __VstlContinue;
@@ -64,7 +64,7 @@ VL_ATTR_COLD void VminiALU___024root___dump_triggers__stl(VminiALU___024root* vl
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___dump_triggers__stl\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if ((1U & (~ vlSelfRef.__VstlTriggered.any()))) {
         VL_DBG_MSGF("         No triggers active\n");
@@ -81,7 +81,7 @@ VL_ATTR_COLD void VminiALU___024root___eval_stl(VminiALU___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_stl\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if ((1ULL & vlSelfRef.__VstlTriggered.word(0U))) {
         VminiALU___024root___ico_sequent__TOP__0(vlSelf);
@@ -94,7 +94,7 @@ VL_ATTR_COLD bool VminiALU___024root___eval_phase__stl(VminiALU___024root* vlSel
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___eval_phase__stl\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
     CData/*0:0*/ __VstlExecute;
     // Body
@@ -111,7 +111,7 @@ VL_ATTR_COLD void VminiALU___024root___dump_triggers__ico(VminiALU___024root* vl
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___dump_triggers__ico\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if ((1U & (~ vlSelfRef.__VicoTriggered.any()))) {
         VL_DBG_MSGF("         No triggers active\n");
@@ -127,7 +127,7 @@ VL_ATTR_COLD void VminiALU___024root___dump_triggers__act(VminiALU___024root* vl
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___dump_triggers__act\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if ((1U & (~ vlSelfRef.__VactTriggered.any()))) {
         VL_DBG_MSGF("         No triggers active\n");
@@ -140,7 +140,7 @@ VL_ATTR_COLD void VminiALU___024root___dump_triggers__nba(VminiALU___024root* vl
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___dump_triggers__nba\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if ((1U & (~ vlSelfRef.__VnbaTriggered.any()))) {
         VL_DBG_MSGF("         No triggers active\n");
@@ -152,7 +152,7 @@ VL_ATTR_COLD void VminiALU___024root___ctor_var_reset(VminiALU___024root* vlSelf
     (void)vlSelf;  // Prevent unused variable warning
     VminiALU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VminiALU___024root___ctor_var_reset\n"); );
-    auto &vlSelfRef = std::ref(*vlSelf).get();
+    auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelf->op1 = VL_RAND_RESET_I(4);
     vlSelf->op2 = VL_RAND_RESET_I(4);
